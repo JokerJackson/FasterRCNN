@@ -13,6 +13,7 @@ def tonumpy(data):
 
 
 def totensor(data, cuda=True):
+    global tensor
     if isinstance(data, np.ndarray):
         tensor = t.from_numpy(data)
     if isinstance(data, t.Tensor):
